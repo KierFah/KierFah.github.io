@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Playfair Display";
+    src: url("public/font/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("public/font/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+    --background: rgba(30,30,30,1);
+    --alt: rgba(15,15,20,1);
+    --shadow: rgba(0,0,0,0.3);
+
+
+    background: linear-gradient(to bottom, var(--background), var(--alt));
+}
+
+#title-container {
+    text-align: center;
+}
+
+#title-name {
+    color: var(--background);
+    text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+    font-family: "Playfair Display", "serif";
+    font-style: italic;
+    font-size: 100px;
+}
+
+img {
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px 3px var(--shadow);
+    margin: 40px;
+}
+
+#sub-title {
+    color: white;
+    font-family: "Montserrat", "serif";
+    font-style: normal;
+    font-weight: 100;
+    font-size: 30px;
+}
