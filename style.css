@@ -32,7 +32,7 @@ body {
     font-style: italic;
     font-size: 100px;
 
-    animation: title-in 2s forwards;
+    animation: title-in 2.5s forwards cubic-bezier(0, 0.75, 0.25, 1);
     
 }
 
@@ -64,9 +64,6 @@ img {
         color: var(--text-fade);
         transform: translateY(300px);
     }
-    90%{
-        transform: translateY(1px);
-    }
     100% {
         color: var(--background);
         transform: translateY(0px);
@@ -79,7 +76,7 @@ img {
     }
 
     50% {
-        transform: translateY(8px);
+        transform: translateY(6px);
     }
 
     100% {
