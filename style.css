@@ -8,12 +8,17 @@
 }
 
 body {
+    --text-fade: rgba(90,90,90,1);
     --background: rgba(30,30,30,1);
     --alt: rgba(15,15,20,1);
-    --shadow: rgba(0,0,0,0.3);
+    --shadow: rgba(0,0,0,0.5);
 
 
     background: linear-gradient(to bottom, var(--background), var(--alt));
+}
+
+#title-mask {
+    overflow: hidden;
 }
 
 #title-container {
@@ -26,12 +31,18 @@ body {
     font-family: "Playfair Display", "serif";
     font-style: italic;
     font-size: 100px;
+
+    animation: title-in 2s forwards;
+    
 }
 
 img {
     border-radius: 5px;
-    box-shadow: 4px 4px 5px 3px var(--shadow);
+    box-shadow: 8px 8px 5px 3px var(--shadow);
     margin: 40px;
+    outline: 1px solid white;
+
+    animation: img-hover 3s infinite cubic-bezier(0.5, 0.05, 0.5, 0.95);
 }
 
 #sub-title {
@@ -40,4 +51,38 @@ img {
     font-style: normal;
     font-weight: 100;
     font-size: 30px;
+}
+
+#img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes title-in {
+    0% {
+        color: var(--text-fade);
+        transform: translateY(300px);
+    }
+    90%{
+        transform: translateY(1px);
+    }
+    100% {
+        color: var(--background);
+        transform: translateY(0px);
+    }
+}
+
+@keyframes img-hover {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
