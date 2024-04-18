@@ -15,14 +15,12 @@
 body {
     --text-fade: rgba(90,90,90,1);
     --background: rgba(30,30,30,1);
+    --menu-background: rgba(20,20,20,0.7);
     --alt: rgba(10,10,10,1);
     --shadow: rgba(0,0,0,0.5);
 
-
     background: linear-gradient(to bottom, var(--background), var(--alt));
 }
-
-
 
 header {
     text-align: center;
@@ -55,7 +53,42 @@ nav {
 }
 
 #header-right {
+    margin-top: -50px;
     display: flex;
+    padding-right: 0px;
+    z-index: 1;
+}
+
+#hamburger-accordion {
+    visibility: collapse;
+    position: absolute;
+    width: 200px;
+    background-color: var(--menu-background);
+}
+
+#hamburger {
+    user-select: none;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+    transform: translateY(0px);
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+#hamburger:after {
+    background-image: none;
+    display: flex;
+}
+
+#hamburger:hover {
+    color: var(--background);
+    transform: translateY(-4px);
+    background-color: white;
+}
+
+#hamburger:focus {
+    box-shadow: none;
 }
 
 .header-button {
@@ -67,7 +100,7 @@ nav {
     margin-right: 50px;
     border-radius: 5px;
     border: 1px solid white;
-    font-weight: 400;
+    font-weight: 100;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -140,17 +173,18 @@ hr {
     }
 
     #header-right {
+        padding-right: 250px;
         flex-direction: column;
 
     }
 
     .header-button {
         font-size: 12px;
-        height: 30px;
-        width: 100px;
+        height: 50px;
+        width: 100%;
         margin-bottom: 30px;
         user-select: none;
-        font-weight: 700;
+        font-weight: 500;
     }
 
     #title {
@@ -160,6 +194,38 @@ hr {
     #subtitle {
         margin-top: 20px;
         font-size: 20px;
+    }
+
+    .personal-img {
+        width: 20px;
+    }
+
+    #hamburger {
+        visibility: visible;
+        display: flex;
+    }
+
+    .header-button {
+        border: none;
+    }
+
+    #home-button {
+        visibility: collapse;
+        display: none;
+    }
+
+    #resume-button {
+        visibility: collapse;
+        display: none;
+    }
+
+    #tableau-button {
+        visibility: collapse;
+        display: none;
+    }
+
+    #hamburger-accordion {
+        visibility: visible;
     }
 }
 

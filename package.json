@@ -1,0 +1,10 @@
+{
+  "name": "kierfah.github.io",
+  "version": "1.0.0",
+  "description": "Hi! I'm Kier Fahsbender, and this is my Resume. Hope you enjoy your time here!",
+  "main": "index.js",
+  "author": "Kier Fahsbender",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
