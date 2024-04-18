@@ -18,6 +18,7 @@ body {
     --menu-background: rgba(20,20,20,0.7);
     --alt: rgba(10,10,10,1);
     --shadow: rgba(0,0,0,0.5);
+    --text: rgba(200,200,200,1);
 
     background: linear-gradient(to bottom, var(--background), var(--alt));
 }
@@ -151,6 +152,25 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: var(--text);
+    text-align: center;
+    font-size: 25px;
+}
+
+#img1 {
+    transform: translate(-300px, 0px) rotate(-20deg);
+}
+
+#img2 {
+    transform: translate(-100px, -100px) rotate(10deg);
+}
+
+#img3 {
+    transform: translate(300px, 0px) rotate(5deg);
+}
+
+#img4 {
+    transform: translate(-300px, 0px) rotate(-6deg);
 }
 
 .personal-img {
@@ -158,31 +178,21 @@ hr {
     border: 1px solid white;
     box-shadow: 8px 8px 5px 3px var(--shadow);
     margin: 40px;
-
-    
 }
 
-#img1 {
-    transform: translate(-300px, 0px) rotate(-20deg);
-}
-#img2 {
-    transform: translate(-100px, -100px) rotate(10deg);
-}
-#img3 {
-    transform: translate(300px, 0px) rotate(5deg);
-}
-#img4 {
-    transform: translate(-300px, 0px) rotate(-6deg);
+#txt3 {
+    margin-bottom: 100px;
 }
 
 @media screen and (max-width: 1000px) {
     #logo-img {
+        margin-left: 20px;
         filter: blur(0px);
         opacity: 1;
     }
 
     #header-right {
-        padding-right: 250px;
+        padding-right: 220px;
         flex-direction: column;
 
     }
@@ -235,7 +245,12 @@ hr {
         background-color: var(--menu-background);
     }
 
+    #img-container {
+        font-size: 15px;
+    }
+
     #img-container img {
+        margin-top: 80px;
         width: 125px;
         height: 200px;
     }
@@ -244,10 +259,10 @@ hr {
         transform: translateX(-130px) rotate(-20deg);
     }
     #img2 {
-        transform: translate(-70px, -100px) rotate(10deg);
+        transform: translate(-70px, -130px) rotate(10deg);
     }
     #img3 {
-        transform: translateX(170px) rotate(5deg);
+        transform: translate(190px, -60px) rotate(5deg);
     }
     #img4 {
         transform: translateX(-150px) rotate(-6deg);
