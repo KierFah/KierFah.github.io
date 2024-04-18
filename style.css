@@ -61,16 +61,17 @@ nav {
 .header-button {
     color: white;
     background-color: transparent;
-    font-size: 20px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
+    font-size: 18px;
+    height: 50px;
+    width: 150px;
     margin-right: 50px;
     border-radius: 5px;
     border: 1px solid white;
     font-weight: 400;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transform: translateY(0px);
     transition: color 1s cubic-bezier(0, 0.75, 0.25, 1), background-color 0.5s cubic-bezier(0, 0.75, 0.25, 1), transform 0.5s cubic-bezier(0, 0.75, 0.25, 1);
 }
@@ -130,6 +131,36 @@ hr {
     margin: 40px;
 
     animation: img-hover 3s infinite cubic-bezier(0.5, 0.05, 0.5, 0.95);
+}
+
+@media screen and (max-width: 1000px) {
+    #logo-img {
+        filter: blur(0px);
+        opacity: 1;
+    }
+
+    #header-right {
+        flex-direction: column;
+
+    }
+
+    .header-button {
+        font-size: 12px;
+        height: 30px;
+        width: 100px;
+        margin-bottom: 30px;
+        user-select: none;
+        font-weight: 700;
+    }
+
+    #title {
+        font-size: 50px;
+    }
+
+    #subtitle {
+        margin-top: 20px;
+        font-size: 20px;
+    }
 }
 
 
