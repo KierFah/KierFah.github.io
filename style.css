@@ -41,7 +41,7 @@ nav {
 #logo-img {
     opacity: 0.5;
     margin-left: 50px;
-    filter: blur(6px);
+    filter: blur(4px);
     transform: translateY(0px);
     transition: opacity 0.5s cubic-bezier(0, 0.75, 0.25, 1), filter 0.5s cubic-bezier(0, 0.75, 0.25, 1), transform 0.5s cubic-bezier(0, 0.75, 0.25, 1);
 }
@@ -69,8 +69,7 @@ nav {
     color: white;
     border-radius: 5px;
     border: 1px solid white;
-    transform: translateY(0px);
-    transition: transform 0.5s ease, background-color 0.5s ease;
+    transition: background-color 0.5s ease;
 }
 
 #hamburger:after {
@@ -80,7 +79,6 @@ nav {
 
 #hamburger:hover {
     color: var(--background);
-    transform: translateY(-4px);
     background-color: white;
 }
 
@@ -149,9 +147,10 @@ hr {
 }
 
 #img-container {
+    overflow: hidden;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .personal-img {
@@ -160,7 +159,20 @@ hr {
     box-shadow: 8px 8px 5px 3px var(--shadow);
     margin: 40px;
 
-    animation: img-hover 3s infinite cubic-bezier(0.5, 0.05, 0.5, 0.95);
+    
+}
+
+#img1 {
+    transform: translate(-300px, 0px) rotate(-20deg);
+}
+#img2 {
+    transform: translate(-100px, -100px) rotate(10deg);
+}
+#img3 {
+    transform: translate(300px, 0px) rotate(5deg);
+}
+#img4 {
+    transform: translate(-300px, 0px) rotate(-6deg);
 }
 
 @media screen and (max-width: 1000px) {
@@ -177,9 +189,8 @@ hr {
 
     .header-button {
         font-size: 12px;
-        height: 50px;
+        height: 60px;
         width: 100%;
-        margin-bottom: 30px;
         user-select: none;
         font-weight: 500;
     }
@@ -191,10 +202,6 @@ hr {
     #subtitle {
         margin-top: 20px;
         font-size: 20px;
-    }
-
-    .personal-img {
-        width: 20px;
     }
 
     #hamburger {
@@ -226,6 +233,24 @@ hr {
         position: absolute;
         width: 200px;
         background-color: var(--menu-background);
+    }
+
+    #img-container img {
+        width: 125px;
+        height: 200px;
+    }
+
+    #img1 {
+        transform: translateX(-130px) rotate(-20deg);
+    }
+    #img2 {
+        transform: translate(-70px, -100px) rotate(10deg);
+    }
+    #img3 {
+        transform: translateX(170px) rotate(5deg);
+    }
+    #img4 {
+        transform: translateX(-150px) rotate(-6deg);
     }
 }
 
