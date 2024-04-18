@@ -61,9 +61,6 @@ nav {
 
 #hamburger-accordion {
     visibility: collapse;
-    position: absolute;
-    width: 200px;
-    background-color: var(--menu-background);
 }
 
 #hamburger {
@@ -226,6 +223,9 @@ hr {
 
     #hamburger-accordion {
         visibility: visible;
+        position: absolute;
+        width: 200px;
+        background-color: var(--menu-background);
     }
 }
 
