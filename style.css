@@ -181,7 +181,26 @@ hr {
 }
 
 #txt3 {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
+}
+
+footer {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer span {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+#video {
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-bottom: 80px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -246,6 +265,7 @@ hr {
     }
 
     #img-container {
+        color: white;
         font-size: 15px;
     }
 
@@ -266,6 +286,11 @@ hr {
     }
     #img4 {
         transform: translateX(-150px) rotate(-6deg);
+    }
+
+    footer span {
+        font-size: 15px;
+        color: white;
     }
 }
 
