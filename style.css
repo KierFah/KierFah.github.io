@@ -60,7 +60,7 @@ nav {
 
 .header-button {
     color: white;
-    outline: 1px solid white;
+    border: 1px solid white;
     background-color: transparent;
     font-size: 20px;
     padding-bottom: 20px;
@@ -127,7 +127,7 @@ hr {
     border-radius: 5px;
     box-shadow: 8px 8px 5px 3px var(--shadow);
     margin: 40px;
-    outline: 1px solid white;
+    border: 1px solid white;
 
     animation: img-hover 3s infinite cubic-bezier(0.5, 0.05, 0.5, 0.95);
 }
