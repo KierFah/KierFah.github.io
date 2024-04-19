@@ -229,6 +229,44 @@ footer div {
     font-size: 10px;
 }
 
+ol {
+    font-size: 25px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    color: white;
+    text-align: left;
+}
+
+#list-item-1 {
+    
+    animation: resume-in 2s forwards cubic-bezier(0, 0.75, 0.25, 1);
+    animation-delay: 0.25s;
+}
+#list-item-2 {
+    transform: translateX(-1000px);
+    animation: resume-in 2s forwards cubic-bezier(0, 0.75, 0.25, 1);
+    animation-delay: 0.5s;
+}
+#list-item-3 {
+    transform: translateX(-1000px);
+    animation: resume-in 2s forwards cubic-bezier(0, 0.75, 0.25, 1);
+    animation-delay: 0.75s;
+}
+#list-item-4 {
+    transform: translateX(-1000px);
+    animation: resume-in 2s forwards cubic-bezier(0, 0.75, 0.25, 1);
+    animation-delay: 1s;
+}
+
+h2 {
+    padding-top: 50px;
+}
+
+#resume-mask {
+    overflow: hidden;
+    width: 1000px;
+    padding-left: 20%;
+}
 
 @media screen and (max-width: 1000px) {
     #logo-img {
@@ -335,6 +373,16 @@ footer div {
         align-items: center;
         flex-direction: column;
     }
+
+    #resume-mask {
+        padding-left: 0;
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    ol {
+        font-size: 18px;
+    }
 }
 
 
@@ -369,5 +417,14 @@ footer div {
 
     100% {
         transform: translateY(0px);
+    }
+}
+
+@keyframes resume-in {
+    0% {
+        transform: translateX(-1000px);
+    }
+    100% {
+        transform: translateX(0px);
     }
 }
