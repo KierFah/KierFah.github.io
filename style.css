@@ -207,7 +207,10 @@ footer span {
     #logo-img {
         margin-left: 20px;
         filter: blur(0px);
-        opacity: 1;
+        opacity: 0.5;
+
+        width: 60px;
+        height: 60px;
     }
 
     #header-right {
@@ -225,7 +228,8 @@ footer span {
     }
 
     #title {
-        font-size: 50px;
+        margin-top: 50px;
+        font-size: 60px;
     }
 
     #subtitle {
@@ -260,7 +264,7 @@ footer span {
     #hamburger-accordion {
         visibility: visible;
         position: absolute;
-        width: 200px;
+        width: 150px;
         background-color: var(--menu-background);
     }
 
@@ -291,6 +295,11 @@ footer span {
     footer span {
         font-size: 15px;
         color: white;
+    }
+
+    #video {
+        width: 350px;
+        height: 200px;
     }
 }
 
