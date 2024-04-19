@@ -225,8 +225,16 @@ footer div {
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 10px;
-    color: white;
+    color: var(--text);
     font-size: 10px;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+#footer-links a:hover {
+    text-decoration: underline;
+    color: white;
 }
 
 ol {
