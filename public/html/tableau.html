@@ -11,43 +11,44 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <span id="header-left">
-                <a href="../../index.html"><img id="logo-img" src="../img/KF2.png" alt="KF logo" width="100px" height="100px"></a>
-            </span>
-            <span id="header-right" class="accordion">
-                <div class="accordion-item" id="hamburger-accordion">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1" id="hamburger">Menu</button>
-                    <div id="collapse1" class="accordion-collapse collapse hide" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <a class="header-button" href="../../index.html">Home</a>
-                        <a class="header-button" href="./resume.html">Resume</a>
-                        <a class="header-button" href="./tableau.html">Tableau</a>
+    <div id="dotted">
+        <header>
+            <nav>
+                <span id="header-left">
+                    <a href="../../index.html"><img id="logo-img" src="../img/KF2.png" alt="KF logo" width="100px" height="100px"></a>
+                </span>
+                <span id="header-right" class="accordion">
+                    <div class="accordion-item" id="hamburger-accordion">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1" id="hamburger">Menu</button>
+                        <div id="collapse1" class="accordion-collapse collapse hide" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <a class="header-button" href="../../index.html">Home</a>
+                            <a class="header-button" href="./resume.html">Resume</a>
+                            <a class="header-button" href="./tableau.html">Tableau</a>
+                        </div>
                     </div>
-                </div>
-                <a id="home-button" class="header-button" href="../../index.html">Home</a>
-                <a id="resume-button" class="header-button" href="./resume.html">Resume</a>
-                <a id="tableau-button" class="header-button" href="./tableau.html">Tableau</a>
-            </span>
-        </nav>
+                    <a id="home-button" class="header-button" href="../../index.html">Home</a>
+                    <a id="resume-button" class="header-button" href="./resume.html">Resume</a>
+                    <a id="tableau-button" class="header-button" href="./tableau.html">Tableau</a>
+                </span>
+            </nav>
+            <div id="title-mask">
+                <div id="title">Tableau</div>
+            </div>
+            <div id="subtitle-mask">
+                <div id="subtitle">The freshest Tableau on the block.<br />Nothing gets left out</div>
+            </div>
+        </header>
+    
+        <main>
+            <iframe src="tableau1.html" frameborder="0" class="tableau" width="80%" height="700px"></iframe>
+            <iframe src="tableau2.html" frameborder="0" class="tableau" width="80%" height="700px"></iframe>
+            <iframe src="tableau3.html" frameborder="0" class="tableau" width="80%" height="700px"></iframe>
+        </main>
         
-        <div id="title-mask">
-            <div id="title">Tableau</div>
-        </div>
-        <div id="subtitle-mask">
-            <div id="subtitle">The freshest Tableau on the block.<br />Nothing gets left out</div>
-        </div>
-
-        <iframe src="tableau1.html" frameborder="0" class="tableau" width="80%" height="700px"></iframe>
-        <iframe src="tableau2.html" frameborder="0" class="tableau" width="80%" height="700px"></iframe>
-        <iframe src="tableau3.html" frameborder="0" class="tableau" width="80%" height="700px"></iframe>
-
         <hr />
         <footer>
             <img src="../img/KF2.png" alt="KF logo" width="25px" height="25px">
-    
             <div>Kier Fahsbender</div>
-    
             <div id="footer-links">
                 <a href="https://github.com/KierFah/KierFah.github.io">GitHub</a>
                 <a href="www.linkedin.com/in/kierfahsbender">LinkedIn</a>
@@ -56,9 +57,9 @@
                 <a href="../html/tableau.html">Tableau</a>
             </div>
         </footer>
-    
-
-    <script src="../bootstrap/bootstrap.min.js"></script>
+        
+        <script src="../bootstrap/bootstrap.min.js"></script>
+    </div>
 </body>
 
 </html>
