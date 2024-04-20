@@ -276,21 +276,28 @@ h2 {
     padding-left: 20%;
 }
 
-#tableau1 {
-    overflow: hidden;
+.tableau {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    overflow:hidden;
     border-radius: 6px;
-    filter: blur(3px);
-    opacity: 0.5;
+    opacity: 0.75;
 
-    transition: filter 0.2s ease, opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+    
+    animation: resume-in 2.5s forwards cubic-bezier(0, 0.75, 0.25, 1);
 }
 
-#tableau1:hover {
-    filter: blur(0);
+.tableau:hover {
     opacity: 0.9;
 }
 
 @media screen and (max-width: 1000px) {
+    .tableau {
+        width: 90%;
+        height: 500px;
+    }
+
     #logo-img {
         margin-left: 20px;
         filter: blur(0px);
