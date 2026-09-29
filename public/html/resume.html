@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Kier Fahsbender's résumé: education at Brigham Young University, professional experience, volunteer leadership, and finance projects." />
+  <title>Kier Fahsbender | Résumé</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #17191b;
+      --surface: #1e2124;
+      --text: #f2f1ed;
+      --muted: #b8bdc3;
+      --accent: #dec6a1;
+      --line: #3a3e43;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-underline-offset: 4px; }
+    a:hover { color: var(--accent); }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 5px;
+    }
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      z-index: 10;
+      padding: 8px 16px;
+      color: var(--background);
+      background: var(--text);
+    }
+    .skip-link:focus { top: 16px; }
+    .site-header, main, .site-footer {
+      width: min(100% - 48px, 980px);
+      margin-inline: auto;
+    }
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding-block: 32px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand {
+      display: inline-grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 650;
+      letter-spacing: 1px;
+    }
+    nav { display: flex; flex-wrap: wrap; gap: 28px; }
+    nav a {
+      padding-block: 8px;
+      text-decoration: none;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    nav a[aria-current="page"] {
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      text-underline-offset: 8px;
+    }
+    .intro { padding-block: 66px 48px; }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 650;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 6vw, 62px);
+      font-weight: 600;
+      letter-spacing: -2px;
+      line-height: 1.12;
+    }
+    .subtitle { margin: 18px 0 0; color: var(--muted); font-size: 19px; }
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      margin-top: 22px;
+      font-size: 15px;
+    }
+    .resume-section {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 36px;
+      padding-block: 38px;
+      border-top: 1px solid var(--line);
+    }
+    h2 {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 650;
+      line-height: 1.6;
+      color: var(--accent);
+    }
+    .entry + .entry {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+    .entry-heading {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 6px 20px;
+    }
+    h3 { margin: 0; font-size: 19px; font-weight: 600; line-height: 1.4; }
+    .dates { margin: 0; color: var(--muted); font-size: 14px; }
+    .role { margin: 5px 0 0; font-weight: 500; }
+    .location { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+    ul { margin: 14px 0 0; padding-left: 20px; }
+    li { padding-left: 4px; }
+    li + li { margin-top: 9px; }
+    li::marker { color: var(--muted); }
+    .section-note { margin: 0 0 24px; color: var(--muted); font-size: 15px; }
+    .simulation-label {
+      display: inline-block;
+      margin: 9px 0 0;
+      padding: 3px 9px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    dl { margin: 0; }
+    .detail + .detail { margin-top: 18px; }
+    dt { margin-bottom: 3px; font-size: 14px; font-weight: 650; }
+    dd { margin: 0; color: var(--muted); }
+    .site-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px 24px;
+      margin-top: 20px;
+      padding-block: 26px 40px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .site-footer p { margin: 0; }
+    @media (max-width: 720px) {
+      .site-header, main, .site-footer { width: min(100% - 36px, 980px); }
+      .site-header { padding-block: 22px; gap: 16px; }
+      nav { gap: 20px; }
+      .intro { padding-block: 44px 34px; }
+      h1 { letter-spacing: -1px; }
+      .subtitle { font-size: 17px; }
+      .resume-section { grid-template-columns: 1fr; gap: 20px; padding-block: 28px; }
+      h2 { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; }
+      .entry-heading { display: block; }
+      .dates { margin-top: 5px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+    @media print {
+      :root { color-scheme: light; --text: #111; --muted: #444; --accent: #111; --line: #ccc; }
+      @page { margin: 16mm; }
+      body { background: white; font-size: 10pt; line-height: 1.4; }
+      .site-header, .site-footer, .skip-link { display: none; }
+      main { width: 100%; }
+      .intro { padding: 0 0 18px; }
+      .eyebrow { margin-bottom: 6px; font-size: 8pt; }
+      h1 { font-size: 28pt; letter-spacing: -1px; }
+      .subtitle { margin-top: 8px; font-size: 11pt; }
+      .contact-links { margin-top: 10px; font-size: 9pt; }
+      .resume-section { display: block; padding-block: 16px; }
+      h2 { margin-bottom: 12px; font-size: 11pt; break-after: avoid; }
+      h3 { font-size: 11pt; }
+      .entry { break-inside: avoid; }
+      .entry + .entry { margin-top: 15px; padding-top: 15px; }
+      .entry-heading { display: flex; }
+      .dates, .location, dt { font-size: 9pt; }
+      ul { margin-top: 8px; }
+      li + li { margin-top: 4px; }
+      .section-note { margin-bottom: 12px; font-size: 9pt; }
+      .simulation-label { font-size: 8pt; }
+      .detail + .detail { margin-top: 10px; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to résumé</a>
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="Kier Fahsbender home">KF</a>
+    <nav aria-label="Main navigation">
+      <a href="../../index.html">Home</a>
+      <a href="./resume.html" aria-current="page">Résumé</a>
+      <a href="./tableau.html">Tableau</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="intro">
+      <p class="eyebrow">Résumé</p>
+      <h1>Kier Fahsbender</h1>
+      <p class="subtitle">BYU Marriott School of Business · Pre-Business, Intended Finance</p>
+      <div class="contact-links" aria-label="Contact information">
+        <a href="mailto:kierf@byu.edu">kierf@byu.edu</a>
+        <a href="https://www.linkedin.com/in/kier-fahsbender">LinkedIn</a>
+      </div>
+    </div>
+
+    <!-- EDUCATION: Update your graduation date, GPA, and scholarships here. -->
+    <section class="resume-section" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <div class="section-content">
+        <article class="entry">
+          <div class="entry-heading">
+            <h3>Brigham Young University</h3>
+            <p class="dates">Expected April 2029</p>
+          </div>
+          <p class="role">Marriott School of Business</p>
+          <p class="location">Pre-Business · Intended Finance · Provo, UT</p>
+          <ul>
+            <li><strong>GPA:</strong> 3.93 / 4.00</li>
+            <li>Brigham Young Scholarship (merit-based); MSS SOAR Scholarship</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE: Each article is one position, listed most recent first. -->
+    <section class="resume-section" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience &amp; leadership</h2>
+      <div class="section-content">
+        <article class="entry">
+          <div class="entry-heading">
+            <h3>Amada Senior Care</h3>
+            <p class="dates">September 2026–Present</p>
+          </div>
+          <p class="role">Sponsor Liaison &amp; Report Manager · Internship</p>
+          <ul>
+            <li>Coordinate communications with the project sponsor to define goals, deliverables, and expectations.</li>
+            <li>Research the Orange County senior care market and competitors to identify growth opportunities.</li>
+            <li>Analyze target audiences and social media metrics to identify opportunities to improve engagement and brand awareness.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-heading">
+            <h3>The Church of Jesus Christ of Latter-day Saints</h3>
+            <p class="dates">May 2024–June 2026</p>
+          </div>
+          <p class="role">Volunteer Representative</p>
+          <p class="location">Kyushu &amp; Honshu, Japan</p>
+          <ul>
+            <li>Led 40+ volunteers across 8 district groups for 11 months, establishing weekly goals and accountability practices.</li>
+            <li>Led 48 performance meetings to analyze results, identify operational issues, and adjust action plans.</li>
+            <li>Delivered instruction, provided one-on-one support, and coordinated activities for 80+ volunteers as a zone leader.</li>
+            <li>Provided Japanese–English interpretation and translation across teams and communities.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-heading">
+            <h3>Brigham Young University</h3>
+            <p class="dates">December 2023–April 2024</p>
+          </div>
+          <p class="role">Special Event Operations Associate</p>
+          <p class="location">Provo, UT</p>
+          <ul>
+            <li>Supported venue operations at the Marriott Center and LaVell Edwards Stadium for 25+ university sporting events and large gatherings.</li>
+            <li>Collaborated with event operations teams on stadium and arena logistics for crowds exceeding 60,000 attendees.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-heading">
+            <h3>Virtual Reality Fun Place</h3>
+            <p class="dates">October 2021–February 2023</p>
+          </div>
+          <p class="role">Sales Associate</p>
+          <p class="location">Danbury, CT</p>
+          <ul>
+            <li>Processed customer transactions and forecasted shift staffing needs to support budgeting and spending decisions.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- FINANCE PROJECTS: Keep these labeled as job simulations. -->
+    <section class="resume-section" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Finance projects &amp; job simulations</h2>
+      <div class="section-content">
+        <p class="section-note">Completed virtual experience programs with practical finance and operations exercises.</p>
+        <article class="entry">
+          <h3>Bank of America · Investment Banking</h3>
+          <p class="simulation-label">Job simulation</p>
+          <ul>
+            <li>Analyzed company financial statements in Excel to develop financial profiles.</li>
+            <li>Used SWOT analysis and strategic criteria to identify potential acquisition targets for a simulated client.</li>
+            <li>Constructed a discounted cash flow model in Excel to estimate company value using projected cash flows and discount rates.</li>
+          </ul>
+        </article>
+        <article class="entry">
+          <h3>Goldman Sachs · Operations</h3>
+          <p class="simulation-label">Job simulation</p>
+          <ul>
+            <li>Analyzed financial data to create trade fail reports and identify transaction risks in a simulated client scenario.</li>
+            <li>Applied process improvement principles to recommend preventive controls.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS: Keep these specific and consistent with your current résumé. -->
+    <section class="resume-section" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills &amp; interests</h2>
+      <dl class="section-content">
+        <div class="detail">
+          <dt>Languages</dt>
+          <dd>Japanese — Advanced</dd>
+        </div>
+        <div class="detail">
+          <dt>Relevant coursework</dt>
+          <dd>Financial &amp; Managerial Accounting, Finance, Marketing, Information Systems</dd>
+        </div>
+        <div class="detail">
+          <dt>Activities</dt>
+          <dd>Varsity Tennis Team Captain</dd>
+        </div>
+        <div class="detail">
+          <dt>Interests</dt>
+          <dd>Japanese language &amp; culture, strength training, traveling</dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Kier Fahsbender</p>
+    <a href="../../index.html">Back to home</a>
+  </footer>
+</body>
+</html>
