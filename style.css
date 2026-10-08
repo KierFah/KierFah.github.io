@@ -463,3 +463,19 @@ h2 {
         transform: translateX(0px);
     }
 }
+
+/* Updated group photo sizing */
+#img2, #img3, #img4 {
+  width: min(85%, 340px);
+  height: auto;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 600px) {
+  #img2, #img3, #img4 {
+    width: min(85%, 280px);
+    height: auto;
+    max-width: 100%;
+    transform: none;
+  }
+}
